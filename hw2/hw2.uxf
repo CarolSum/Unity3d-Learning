@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>496</x>
+      <y>656</y>
+      <w>320</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>FirstController
+--
++userGUI: UserGUI
++fromCoast: Coast
++toCoast: Coast
++boat: Boat
+-characters: Character[]
+-water_pos: Vector3
+--
+Awake(): void
++LoadResources(): void
+-loadCharacter(): void
++OnMoveBoat(): void
+-checkGameOver(): int
++Restart(): void
++OnClickedCharacter(characterController: Character): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>696</y>
+      <w>136</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>UserGUI
+--
+-userAction: UserAction
+-style: GUIStyle
+-buttonStyle: GUIStyle
++status: int
+--
+Start(): void
+OnGUI(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>304</y>
+      <w>224</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Director
+--
+_-_instance: Director_
++currentSceneController: SceneController
+--
+_+getInstance(): Director_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>496</y>
+      <w>152</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+SceneController
+--
++LoadResources(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>488</y>
+      <w>304</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+UserAction
+--
+OnMoveBoat():void
+OnClickedCharacter(characterController: Character); void
+Restart(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>40</y>
+      <w>208</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>MoveBehaviour
+--
+-speed: float
++status: int
++dest: Vector3
++middle: Vector3
+--
++Update(): void
++setDestination(_dest: Vector3): void
++reset(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>288</y>
+      <w>224</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>ClickBehaviour
+--
+-action: UserAction
+-controller: Character
+--
++Start(): void
++setCharacter(character: Character): void
++OnMouseDown(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>984</x>
+      <y>296</y>
+      <w>240</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>Character
+--
+-character: GameObject
+-moveScript: MoveBehaviour
+-characterType: int
+-clickBehaviour: ClickBehaviour
++_isOnBoat: bool
++coastCtrl: Coast
+--
++Character(character_type: string)
++setName(name: string): void
++getName(): string
++getType(): int
++setPosition(pos: Vector3): void
++moveToPosition(destination: Vector3): void
++getOnBoat(boat: Boat): void
+getOnCoast(coast: Coast): void
++isOnBoat(): bool
++getCoastController(): Coast
++reset(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>976</x>
+      <y>8</y>
+      <w>264</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>Coast
+--
+-coast： GameObject
+-startPos： Vector3
+-endPos： Vector3
+-positions: Vector3[]
+-startOrEnd: int
++charactersOnCoast: Character[]
+--
++Coast(_startOrEnd: string)
++getEmptyPosition(): Vector3
++getEmptyIndex(): int
++getOnCoast(character: Character): void
++getOffCoast(character_name: string): Character
++getStartOrEnd(): int
++getCharactersNum(): int[]
++reset(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>984</x>
+      <y>632</y>
+      <w>272</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>Boat
+--
+-boat: GameObject
+-moveScript: MoveBehaviour
+-fromPosition: Vector3
+-toPosition: Vector3
+-from_positions: Vector3[]
+-to_positions: Vector3[]
++to_or_from: int
++passenger: Character[]
+--
++Boat()
++Move(): void
++getEmptyIndex(): int
++getEmptyPosition(): Vector3
++isEmpty(): bool
++GetOnBoat(character: Character): void
++GetOffBoat(passenger_name: string): Character
++getGameObject(): GameObject
++getToOrFrom(): int
++getCharacterNum(): int[]
++reset(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>544</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>568</y>
+      <w>376</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;450.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>568</y>
+      <w>24</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>808</x>
+      <y>712</y>
+      <w>192</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>56</y>
+      <w>104</w>
+      <h>680</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;830.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>360</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>728</y>
+      <w>192</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>368</y>
+      <w>296</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;350.0;80.0;350.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>88</y>
+      <w>240</w>
+      <h>624</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;440.0;280.0;440.0;110.0;440.0;110.0;760.0;280.0;760.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>768</x>
+      <y>312</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>536</y>
+      <w>32</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=2</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1136</x>
+      <y>208</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=n
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1072</x>
+      <y>208</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1064</x>
+      <y>536</y>
+      <w>24</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
