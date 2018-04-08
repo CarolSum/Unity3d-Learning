@@ -4,7 +4,7 @@
 #### 参考 Fantasy Skybox FREE 构建自己的游戏场景
 创建一个Terrian对象，然后使用unity3d自带的工具，给Terrian画山，用笔刷画各种纹理，然后还可以种树，效果如下图。背景是自己添加的一个天空图。
 
-![这里写图片描述](https://img-blog.csdn.net/2018040900463998?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JranM2MjY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](http://wx4.sinaimg.cn/mw690/ee0f8ddcgy1fq5rjfl2e6j20v90h3x2q.jpg)
 
 #### 游戏对象总结
 
