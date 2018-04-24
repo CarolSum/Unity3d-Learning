@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c2b1cc9fbac88e944b7d508328f6a0ec
+timeCreated: 1523800132
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ufoItem: {fileID: 1520754837812626, guid: dc651901328c7a0469170b8a699713f5, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2df12394bc5dc774bba9375704486066
+timeCreated: 1523716866
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PlaneItem: {fileID: 1364561056126744, guid: e129ab54c7ccf494dac98f26390f1090,
+      type: 2}
+  - LauncherItem: {fileID: 1723071921239222, guid: 0608554f1976f4d4fa7a5a6f4abef2d4,
+      type: 2}
+  - ExplosionItem: {fileID: 1844396823528838, guid: 8d3f6fa6ca267f14994242e8ff42ecf7,
+      type: 2}
+  - greenMat: {fileID: 2100000, guid: 232de474f4b319a409090242f676b59d, type: 2}
+  - redMat: {fileID: 2100000, guid: 1155fb00f8b5c3f4b9681304768c908e, type: 2}
+  - blueMat: {fileID: 2100000, guid: 6203c56a8d702044a8fa1f45e4ed26c2, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
