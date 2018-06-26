@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AITank", "AITank.csproj", "{97EF9819-55A4-F216-1C9E-532F26C37896}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AITank.Editor", "AITank.Editor.csproj", "{48805D44-EBDE-2C0A-6CFB-C82C7FA7C7A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97EF9819-55A4-F216-1C9E-532F26C37896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EF9819-55A4-F216-1C9E-532F26C37896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EF9819-55A4-F216-1C9E-532F26C37896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EF9819-55A4-F216-1C9E-532F26C37896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48805D44-EBDE-2C0A-6CFB-C82C7FA7C7A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48805D44-EBDE-2C0A-6CFB-C82C7FA7C7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48805D44-EBDE-2C0A-6CFB-C82C7FA7C7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48805D44-EBDE-2C0A-6CFB-C82C7FA7C7A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
